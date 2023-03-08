@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/1.cpp" "CMakeFiles/lab1.dir/1.cpp.o" "gcc" "CMakeFiles/lab1.dir/1.cpp.o.d"
   "/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/2.cpp" "CMakeFiles/lab1.dir/2.cpp.o" "gcc" "CMakeFiles/lab1.dir/2.cpp.o.d"
   "/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/3.cpp" "CMakeFiles/lab1.dir/3.cpp.o" "gcc" "CMakeFiles/lab1.dir/3.cpp.o.d"
+  "/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/4.cpp" "CMakeFiles/lab1.dir/4.cpp.o" "gcc" "CMakeFiles/lab1.dir/4.cpp.o.d"
   )
 
 # Targets to which this target links.

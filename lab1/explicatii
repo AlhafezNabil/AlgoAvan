@@ -1,0 +1,47 @@
+====== 1
+
+
+
+====== 2
+
+Pentru a rezolva această problemă putem folosi algoritmul lui Jarvis pentru a calcula acoperirea convexă a punctelor date și apoi putem număra virajele pe baza acestui poligon convex.
+
+Algoritmul lui Jarvis pornește de la cel mai din stânga punct și construiește acoperirea convexă prin alegerea în fiecare pas a următorului punct astfel încât unghiul format de ultimul punct ales, punctul anterior și punctul curent să fie maxim. Algoritmul continuă până când se ajunge din nou la cel mai din stânga punct.
+
+Pentru a calcula virajele pe baza poligonului convex putem itera prin fiecare tripletă de puncte consecutive și calcula produsul vectorial dintre vectorii formați de aceste puncte. Dacă produsul vectorial este pozitiv, avem un viraj la stânga, dacă este negativ avem un viraj la dreapta, iar dacă este zero punctele sunt coliniare și continuăm cu următoarea tripletă. În plus, putem număra și numărul de puncte coliniare prin verificarea dacă produsul vectorial este zero și dacă tripletul de puncte nu reprezintă un segment.
+
+
+
+====== 3
+Pentru a găsi acoperirea convexă a unui poligon stelat, trebuie să urmărim următorii pași:
+
+Sortăm punctele poligonului în ordine trigonometrică.
+Adăugăm primul punct din sortarea noastră la stiva acoperirii convexe.
+Parcurgem fiecare punct din sortarea noastră și, pentru fiecare, facem următoarele:
+a. Dacă stiva acoperirii convexe are mai puțin de 2 puncte, adăugăm punctul curent la stivă.
+b. Dacă stiva acoperirii convexe are 2 sau mai multe puncte, extragem ultimele 2 puncte din stivă și verificăm dacă direcția lor este la stânga sau la dreapta punctului curent. Dacă direcția este la stânga, adăugăm punctul curent la stivă. Altfel, ștergem ultimul punct din stivă și continuăm verificarea cu punctul anterior.
+
+La final, stiva acoperirii convexe va conține punctele acoperirii convexe a poligonului stelat.
+Pentru implementare, puteți folosi o stivă pentru a stoca punctele acoperirii convexe și un algoritm de sortare pentru a sorta punctele poligonului în ordine trigonometrică. Complexitatea algoritmului este liniară, deoarece fiecare punct din poligon este verificat o singură dată și adăugat sau șters o singură dată din stivă.
+
+====== 4
+
+Pentru a rezolva problema Travelling Salesman Problem folosind acoperirea convexă, vom urma următorii pași:
+
+Citim punctele de la tastatură și le stocăm într-o listă.
+
+Sortăm lista de puncte în funcție de coordonata x, astfel încât primul punct să fie cel cu abscisa minimă.
+
+Construim acoperirea convexă a punctelor folosind algoritmul Graham Scan. Acesta poate fi descris în următorii pași:
+
+a. Sortăm punctele în funcție de unghiul lor polar față de punctul cu abscisa minimă (primul punct din lista sortată).
+
+b. Inițializăm o stivă și adăugăm primul punct în stivă.
+
+c. Parcurgem restul punctelor și pentru fiecare punct verificăm dacă acesta se află la stânga laturii formată de ultimele două puncte din stivă. Dacă punctul se află la dreapta laturii, scoatem ultimul punct din stivă până când punctul se află la stânga laturii sau stiva are mai puțin de două puncte.
+
+d. Adăugăm punctul în stivă.
+
+Parcurgem stiva și construim un ciclu hamiltonian folosind laturile formate de punctele din stivă.
+
+Afișăm coordonatele punctelor din ciclul hamiltonian.

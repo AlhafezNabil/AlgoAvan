@@ -5,32 +5,32 @@
 using namespace std;
 
 
-struct Point {
+struct Point2 {
     long long int x, y;
 };
 
-int orientation(Point p1, Point p2, Point p3) {
+int orientation2(Point2 p1, Point2 p2, Point2 p3) {
     long long int val = (long long int) (p2.y - p1.y) * (p3.x - p2.x) - (long long int) (p2.x - p1.x) * (p3.y - p2.y);
     if (val == 0) return 0;  // colinear
     return (val > 0) ? 1 : 2; // clock or counterclock wise
 }
 
 
-void solve() {
+void solve2() {
     int n;
 //    ifstream cin("/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/TestePubliceLab1/roby/roby12.in");
 //    ifstream fout("/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/TestePubliceLab1/roby/roby12.out");
 
     cin >> n;
 
-    vector<Point> points(n);
+    vector<Point2> points(n);
     for (int i = 0; i < n; i++) {
         cin >> points[i].x >> points[i].y;
     }
 
     int left_turns = 0, right_turns = 0, straight = 0;
     for (int i = 0; i < n - 2; i++) {
-        int o = orientation(points[i], points[i + 1], points[i + 2]);
+        int o = orientation2(points[i], points[i + 1], points[i + 2]);
         if (o == 0) {
             straight++;
         } else if (o == 1) {
@@ -40,7 +40,7 @@ void solve() {
         }
     }
     // check orientation of last two points to determine final turn
-    int o = orientation(points[n - 2], points[n - 1], points[0]);
+    int o = orientation2(points[n - 2], points[n - 1], points[0]);
     if (o == 0) {
         straight++;
     } else if (o == 1) {
@@ -63,8 +63,8 @@ void solve() {
     cout << left_turns << " " << right_turns << " " << straight << endl;
 }
 
-int main() {
-    solve();
+int main2() {
+    solve2();
     return 0;
 }
 

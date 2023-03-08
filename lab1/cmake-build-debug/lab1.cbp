@@ -89,6 +89,9 @@
 		<Unit filename="/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/3.cpp">
 			<Option target="lab1"/>
 		</Unit>
+		<Unit filename="/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/4.cpp">
+			<Option target="lab1"/>
+		</Unit>
 		<Unit filename="/Users/nabil.alhafez/CLionProjects/AlgoAvan/lab1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

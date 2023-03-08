@@ -201,6 +201,30 @@ lab1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/3.cpp.s
 .PHONY : 3.cpp.s
 
+4.o: 4.cpp.o
+.PHONY : 4.o
+
+# target to build an object file
+4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/4.cpp.o
+.PHONY : 4.cpp.o
+
+4.i: 4.cpp.i
+.PHONY : 4.i
+
+# target to preprocess a source file
+4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/4.cpp.i
+.PHONY : 4.cpp.i
+
+4.s: 4.cpp.s
+.PHONY : 4.s
+
+# target to generate assembly for a file
+4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/4.cpp.s
+.PHONY : 4.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... 3.o"
 	@echo "... 3.i"
 	@echo "... 3.s"
+	@echo "... 4.o"
+	@echo "... 4.i"
+	@echo "... 4.s"
 .PHONY : help
 
 
